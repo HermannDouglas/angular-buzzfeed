@@ -1,11 +1,11 @@
 <div class="quizz__container">
   <div class="quizz_logo">
     <img src="assets/imgs/logo.png" alt="Imagem da Logo" srcset="">
-    <h3>Título</h3>
+    <h3>{{ title }}</h3>
   </div>
 
   <div class="quizz_questions">
-    <h3>Questão selecionada</h3>
+    <h3>{{ questionsSelected.question }}</h3>
   </div>
 
   <div class="quizz_options">
@@ -14,7 +14,7 @@
     </button>
   </div>
 
-  <div class="quizz_results">
+  <div *ngIf=finished class="quizz_results">
     <h1>O seu resultado é:</h1>
     <p>Resposta selecionada</p>
   </div>
